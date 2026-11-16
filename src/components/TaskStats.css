@@ -1,0 +1,41 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  border: 1px solid #dfe3ff;
+  border-radius: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.stat-card.warn {
+  background: linear-gradient(135deg, #fff7ed, #fffaf5);
+  border-color: #fed7aa;
+}
+
+.stat-card.success {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border-color: #bbf7d0;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.78rem;
+  color: #4b5563;
+  margin-bottom: 0.3rem;
+}
+
+.stat-card strong {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: #111827;
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
